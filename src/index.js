@@ -38,5 +38,5 @@ app
 
 // Start server
 app.listen(process.env.PORT || 3002, () => {
-  console.log(`Server listening`)
+  console.log(`Server listening on 3002`)
 })
