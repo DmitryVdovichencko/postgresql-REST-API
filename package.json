@@ -9,9 +9,16 @@
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "start": "node dist/index.js",
+    "start:dev": "nodemon dist/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "pg": "^7.12.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
