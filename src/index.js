@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
 const getBooks = (request, response) => {
-	console.log(pool);
   pool.query('SELECT * FROM books', (error, results) => {
     if (error) {
       throw error
