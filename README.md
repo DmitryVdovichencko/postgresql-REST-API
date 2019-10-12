@@ -1,6 +1,6 @@
 # REST API tutorial for NodeJS PostgreSQL 
 
-[![Build Status](https://travis-ci.org/DmitryVdovichencko/postgresql-REST-API.svg?branch=master)](https://travis-ci.org/DmitryVdovichencko/postgresql-REST-API)  [![Maintainability](https://api.codeclimate.com/v1/badges/c5e2dd0416a3468653b4/maintainability)](https://codeclimate.com/github/DmitryVdovichencko/node-js-boilerplate/maintainability)  [![Test Coverage](https://api.codeclimate.com/v1/badges/c5e2dd0416a3468653b4/test_coverage)](https://codeclimate.com/github/DmitryVdovichencko/node-js-boilerplate/test_coverage)
+[![Build Status](https://travis-ci.org/DmitryVdovichencko/postgresql-REST-API.svg?branch=master)](https://travis-ci.org/DmitryVdovichencko/postgresql-REST-API)  [![Maintainability](https://api.codeclimate.com/v1/badges/a4651aef30c68193a87f/maintainability)](https://codeclimate.com/github/DmitryVdovichencko/postgresql-REST-API/maintainability)  [![Test Coverage](https://api.codeclimate.com/v1/badges/a4651aef30c68193a87f/test_coverage)](https://codeclimate.com/github/DmitryVdovichencko/postgresql-REST-API/test_coverage)
 
 ## Setting up PostgreSQL on Ubuntu
 
