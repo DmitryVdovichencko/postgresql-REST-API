@@ -21,7 +21,8 @@
     "express": "^4.17.1",
     "pg": "^7.12.1",
     "rimraf": "^3.0.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "tape": "^4.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.2",
