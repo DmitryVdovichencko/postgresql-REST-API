@@ -15,7 +15,7 @@
     "prepublishOnly": "npm run build",
     "rimraf": "rimraf dist",
     "test": "jest --detectOpenHandles",
-    "create": "node initTable",
+    "create": "node initTable.js",
     "prettier":"prettier --write __tests__/*.js && prettier --write src/*.js",
     "lint":"eslint [src] && eslint __tests__",
     "start": "yarn build && node dist/index.js",
