@@ -14,5 +14,5 @@ const initTable = () => {
       pool.end();
     });
 };
-
+initTable();
 export default initTable;
