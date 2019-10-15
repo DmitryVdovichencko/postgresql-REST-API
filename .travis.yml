@@ -1,10 +1,14 @@
 language: node_js
 node_js:
   - node
+services:
+  - postgresql
 env:
   global:
     - CC_TEST_REPORTER_ID=eb741625da4b075b0e129b8f04cc5a6b050552fa38118f5d924c76a2232a8255
 before_script:
+  - psql -c 'CREATE DATABASE api_db;' -U postgres
+  - psql -c "CREATE USER admin_api WITH PASSWORD 'x34louf1M';" -U postgres
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
