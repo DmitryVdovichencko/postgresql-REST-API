@@ -21,7 +21,7 @@ const getBooks = (request, response) => {
 const addBook = (request, response) => {
   const { author, title } = request.body;
 
-  pool.query('INSERT INTO books (author, title) VALUES ($1, $2)', [author, title], (error) => {
+  pool.query('INSERT INTO books (author, title) VALUES ($1, $2)', [author, title], error => {
     if (error) {
       throw error;
     }
@@ -37,8 +37,11 @@ app
   .post(addBook);
 
 // Start server
-app.listen(process.env.PORT || 3002, () => {
+const server = app.listen(process.env.PORT || 3002, () => {
   console.log('Server listening on 3002');
+  server.close(() => {
+    console.log('Server closed');
+  });
 });
 
 export default app;
