@@ -5,6 +5,8 @@ start:
 build:
 	rm -rf dist
 	npm run build
+create:
+	npm run create
 publish:
 	npm publish
 lint:

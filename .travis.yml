@@ -9,12 +9,13 @@ env:
 before_script:
   - psql -c 'CREATE DATABASE api_db;' -U postgres
   - psql -c "CREATE USER admin_api WITH PASSWORD 'x34louf1M';" -U postgres
-  - "npm run create"
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
   - make lint
+  - make build
+  - make create
   - make test-coverage
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT 
