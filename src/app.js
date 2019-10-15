@@ -10,23 +10,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
 const getBooks = (request, response) => {
-  pool.query(
-    'CREATE TABLE IF NOT EXISTS books (ID SERIAL PRIMARY KEY, author VARCHAR(255) NOT NULL,title VARCHAR(255) NOT NULL)',
-  ),
-    error => {
-      if (error) {
-        throw error;
-      }
-    };
-  pool.query(
-    'INSERT INTO books (author, title) VALUES ($1, $2)',
-    ['Dimon', 'awesomeBook'],
-    error => {
-      if (error) {
-        throw error;
-      }
-    },
-  );
   pool.query('SELECT * FROM books', (error, results) => {
     if (error) {
       throw error;
@@ -38,7 +21,7 @@ const getBooks = (request, response) => {
 const addBook = (request, response) => {
   const { author, title } = request.body;
 
-  pool.query('INSERT INTO books (author, title) VALUES ($1, $2)', [author, title], error => {
+  pool.query('INSERT INTO books (author, title) VALUES ($1, $2)', [author, title], (error) => {
     if (error) {
       throw error;
     }
