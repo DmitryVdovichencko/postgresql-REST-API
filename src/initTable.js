@@ -1,4 +1,5 @@
-import pool from './config';
+const pool = require('./config');
+
 
 const initTable = () => {
   pool
@@ -15,4 +16,6 @@ const initTable = () => {
     });
 };
 
-export default initTable;
+module.exports = {
+ initTable
+};
