@@ -84,7 +84,7 @@ const deleteComment = (request, response) => {
     response.status(200).json({ status: 'success', message: `Comment deleted with ID: ${id}` });
   });
 };
-app.route('/comments');
+
 app.get('/comments', getComments);
 app.get('/comments/:slug', getCommentsBySlug);
 app.post('/comments', createComment);
