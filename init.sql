@@ -1,8 +1,13 @@
-CREATE TABLE books (
+CREATE TABLE comments (
   ID SERIAL PRIMARY KEY,
-  author VARCHAR(255) NOT NULL,
-  title VARCHAR(255) NOT NULL
+  name VARCHAR(255) NOT NULL,
+  date TIMESTAMPTZ DEFAULT Now(),
+  slug VARCHAR(255) NOT NULL,
+  parent_comment_id INTEGER,
+  text VARCHAR(5000) NOT NULL
 );
 
-INSERT INTO books (author, title)
-VALUES  ('J.K. Rowling', 'Harry Potter');
+INSERT INTO
+  comments (name, text, slug, parent_comment_id)
+VALUES
+  ('Dimas', 'Testing the awesome comments API', 'how-to-bake-a-server', null);

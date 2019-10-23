@@ -3,7 +3,7 @@ import pool from './config';
 const initTable = () => {
   pool
     .query(
-      'CREATE TABLE IF NOT EXISTS books (ID SERIAL PRIMARY KEY, author VARCHAR(255) NOT NULL,title VARCHAR(255) NOT NULL)',
+      'CREATE TABLE IF NOT EXISTS comments (ID SERIAL PRIMARY KEY, name VARCHAR(255) NOT NULL,date TIMESTAMPTZ DEFAULT Now(),slug VARCHAR(255) NOT NULL,parent_comment_id INTEGER,text VARCHAR(5000) NOT NULL)',
     )
     .then((res) => {
       console.log(res);

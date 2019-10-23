@@ -1,27 +1,29 @@
 import request from 'supertest';
 import app from '../src/app';
 
-describe('Get books from server', () => {
-  it('Gets the books endpoint', async (done) => {
+describe('Get comments from server', () => {
+  it('Gets the comments endpoint', async (done) => {
     // Sends GET Request to /test endpoint
     await request(app)
-      .get('/books/')
+      .get('/comments')
       .expect(200);
 
     done();
   });
 });
 
-describe('Send book to server', () => {
-  it('Gets the books endpoint', async (done) => {
+describe('Send comment to server', () => {
+  it('Gets the comments endpoint', async (done) => {
     // Sends GET Request to /test endpoint
-    const newBook = {
-      title: 'Game of Thrones',
-      author: 'George R. R. Martin',
+    const newComment = {
+      name: 'new comment',
+      text: 'awesome post!',
+      slug: 'how-to-bake-a-server',
+      parentCommentId: 0,
     };
     await request(app)
-      .post('/books')
-      .send(newBook)
+      .post('/comments')
+      .send(newComment)
       .expect(201);
 
     done();
