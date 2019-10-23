@@ -1,19 +1,15 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import pool from './config';
 import helmet from 'helmet';
 import compression from 'compression';
 import rateLimit from 'express-rate-limit';
+import pool from './config';
 
 const app = express();
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
   max: 5, // 5 requests,
-});
-const postLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000,
-  max: 1,
 });
 
 app.use(bodyParser.json());
