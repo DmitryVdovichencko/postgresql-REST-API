@@ -10,4 +10,4 @@ CREATE TABLE comments (
 INSERT INTO
   comments (name, text, slug, parent_comment_id)
 VALUES
-  ('Dimas', 'Testing the awesome comments API', 'how-to-bake-a-server', 0);
+  ('Dimas', 'Test the awesome comments API', 'how-to-bake-a-server', 0);
