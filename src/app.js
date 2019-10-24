@@ -59,6 +59,7 @@ const createComment = (request, response) => {
 
 const updateComment = (request, response) => {
   const { name, slug, text } = request.body;
+
   const id = parseInt(request.params.id, 10);
   const parentCommentId = parseInt(request.body.parentCommentId, 10);
 
