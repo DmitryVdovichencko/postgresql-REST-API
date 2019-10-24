@@ -13,7 +13,7 @@ describe('Get comments from server', () => {
 });
 
 describe('Send comment to server', () => {
-  it('Posting the comments endpoint', async (done) => {
+  it('Post the comments endpoint', async (done) => {
     // Sends GET Request to /test endpoint
     const newComment = {
       name: 'new comment',
